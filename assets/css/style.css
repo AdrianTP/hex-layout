@@ -1,0 +1,107 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #555;
+}
+
+.hex-row {
+    width: 100%;
+    clear: both;
+}
+
+.hex-row.odd {
+    margin: 0;
+}
+  
+.hex-row.even {
+    margin-left: 102px;
+}
+
+.hexagon {
+    width: 200px;
+    height: 231px;
+    overflow: hidden;
+    /*visibility: hidden;*/
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+    cursor: pointer;
+    float: left;
+    margin: 0 4px -54px 0;
+}
+
+.old-ie .hexagon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.5000000000000004, M12=-0.8660254037844384, M21=0.8660254037844384, M22=-0.5000000000000004, SizingMethod='auto expand')";
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=-0.5000000000000004,M12=-0.8660254037844384,M21=0.8660254037844384,M22=-0.5000000000000004,SizingMethod='auto expand');
+}
+
+.old-ie .hexagon {
+    margin: -32px 4px -54px -53px;
+}
+
+.hexagon .in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+}
+
+.old-ie .hexagon .in1 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4999999999999997, M12=0.8660254037844388, M21=-0.8660254037844388, M22=0.4999999999999997, SizingMethod='auto expand')";
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.4999999999999997,M12=0.8660254037844388,M21=-0.8660254037844388,M22=0.4999999999999997,SizingMethod='auto expand');
+}
+
+.old-ie .hexagon .in1 {
+    margin-left: -53px;
+    margin-top: -32px;
+}
+
+.hexagon .in1 .in2 {
+    padding: 60px 10px;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    /*background: url('http://placekitten.com/g/250/350') no-repeat 50%;*/
+    background-color: #00F;
+    color: #FFF;
+}
+
+.old-ie .hexagon .in1 .in2 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4999999999999997, M12=0.8660254037844388, M21=-0.8660254037844388, M22=0.4999999999999997, SizingMethod='auto expand')";
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.4999999999999997,M12=0.8660254037844388,M21=-0.8660254037844388,M22=0.4999999999999997,SizingMethod='auto expand');
+}
+
+.old-ie .hexagon .in1 .in2 {
+    margin-left: -53px;
+    margin-top: -32px;
+}
+
+.hexagon .in1 .in2:hover {
+    /*background: url('http://placekitten.com/250/350') no-repeat 50%;*/
+    background-color: #FFF;
+    color: #222;
+}
+
+.hexagon .in1 .in2 .content {
+    width: 100%;
+    height: 100%;
+}
+
+.ie9 * {
+    filter: none !important;
+}
